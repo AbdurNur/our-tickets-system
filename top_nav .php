@@ -3,25 +3,24 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item pe-5">
-        <a class="nav-link " data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block pe-5">
-        <a href="emplyee_dasbord.php" class="nav-link ">Dasbord</a>
+        <a href="dasbord.php" class="nav-link">Dasbord</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block pe-5">
-        <a href="logout.php" class="nav-link ">Log Out</a>
+        <a href="logout.php" class="nav-link">Log Out</a>
       </li>
-      
       <li class="nav-item d-none d-sm-inline-block pe-5">
-        <a href="emplyee_creat_ticket.php" class="nav-link">Creat Ticket</a>
+        <a href="registration.php" class="nav-link">Add User</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        
-        <a href="employee_ticket_list.php" class="nav-link">Ticket List</a>
+      <li class="nav-item d-none d-sm-inline-block pe-5">
+        <a href="creat_ticket.php" class="nav-link">Creat Ticket</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block ps-5">
-        <a href="emplyee_profile.php" class="nav-link ">Profile</a>
+      <li class="nav-item d-none d-sm-inline-block pe-5">
+        <a href="profile.php" class="nav-link">Profile</a>
       </li>
+    
     </ul>
 
     <!-- Right navbar links -->

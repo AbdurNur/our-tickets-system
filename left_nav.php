@@ -11,7 +11,10 @@
           echo"Employee User";
 
         }elseif($_SESSION['user_type']=="3"){
-          echo"Service Staf";
+          echo"Support";
+
+        }elseif($_SESSION['user_type']=="4"){
+          echo"User";
 
         }
       
@@ -23,7 +26,13 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="theme/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <div class="common img " >
+                                  
+            <img  src='images/<?php  echo $_SESSION['user_image']?>'>
+                                    
+                                
+                                
+          </div>
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION['login_username'];?></a>
@@ -38,17 +47,53 @@
           
           <li class="nav-header">LABELS</li>
           <li class="nav-item">
-            <a href="user.php" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">All User</p>
+            <a href="ticket_list.php" class="nav-link">
+            <i class="nav-icon far fa-circle text-danger"></i>
+              <p>Ticket List</p>
             </a>
-          </li>
+        </li>
+          
           <li class="nav-item">
             <a href="profile.php" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
               <p>Profile</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="profile_update.php" class="nav-link">
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p>Profile Edit</p>
+            </a>
+          </li>
+
+          <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type']==1){?>
+          <li class="nav-item">
+            <a href="registration.php" class="nav-link">
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p>Creat User</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="users_list.php" class="nav-link">
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p>User List</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="user_access.php" class="nav-link">
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p>Access Module</p>
+            </a>
+          </li>
+          
+          <?php } ?>
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link">
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p>Log out</p>
+            </a>
+          </li>
+          
           
         </ul>
       </nav>

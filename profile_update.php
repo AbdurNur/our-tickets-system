@@ -7,7 +7,6 @@ include "array.php";
 ?>
 
 
-
 <!-- header part -->
 <?php
 include "header.php";
@@ -15,17 +14,18 @@ include "header.php";
 ?>
     
  <!-- Top Navbar -->
-  <?php
-  include "emplyee_top_nav.php";
+ <?php
+  include "top_nav.php";
   ?>
   
-  
+  <!-- /.navbar -->
 
   <!-- Left Sidebar Container -->
 <?php
   
-  include "employee_left_nav.php";  
+  include "left_nav.php"; 
 ?>
+
 <div class="content-wrapper">
      <!-- Content Header (Page header) -->
      <section class="content-header">
@@ -36,7 +36,7 @@ include "header.php";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="admin_dasbord.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="dashbord.php">Home</a></li>
               <li class="breadcrumb-item active">Update</li>
             </ol>
           </div>

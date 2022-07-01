@@ -4,6 +4,7 @@ include "function/regestration_process.php";
 include "array.php";
 
 
+
 ?>
 
 
@@ -16,7 +17,7 @@ include "header.php";
     
  <!-- Top Navbar -->
  <?php
-  include "admin_top_nav.php";
+  include "top_nav.php";
   ?>
   
   <!-- /.navbar -->
@@ -24,7 +25,7 @@ include "header.php";
   <!-- Left Sidebar Container -->
 <?php
   
-  include "admin_left_nav.php"; 
+  include "left_nav.php"; 
 ?>
 <div class="content-wrapper">
      <!-- Content Header (Page header) -->
@@ -36,7 +37,7 @@ include "header.php";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="admin_dasbord.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="dashbord.php">Home</a></li>
               <li class="breadcrumb-item active">User Registration</li>
             </ol>
           </div>
@@ -142,7 +143,7 @@ include "header.php";
                         <div class="mt-3 col-md-12">
                             <label for="inputState" class="form-label">User Type</label>
                             <select class="form-select" aria-label="" name="user_type" >
-                                <option> </option>
+                                <option>Please Select </option>
                             
                             <?php  foreach($user_type as $key=>$val){ ?>
 

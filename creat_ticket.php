@@ -1,27 +1,29 @@
 <!-- header part -->
 <?php session_start();
-
-  include "function/ticket_process.php";
-  include "array.php";
+    include "function/ticket_process.php";
+    include "array.php";
     include "header.php";
-
-   
+    
 
 ?>
   
-<!-- Top Navbar -->
-<?php
-  include "admin_top_nav.php";
+
+ <!-- Top Navbar -->
+ <?php
+  include "top_nav.php";
   ?>
   
+  <!-- /.navbar -->
   <!-- /.navbar -->
 
   <!-- Left Sidebar Container -->
 <?php
-  
-  include "admin_left_nav.php";  
+ include "left_nav.php";    
 ?>
-
+<?php
+  
+    
+?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -34,7 +36,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="admin_dasbord.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="dasbord.php">Home</a></li>
               <li class="breadcrumb-item active">New Ticket</li>
             </ol>
           </div>
@@ -137,8 +139,7 @@
 
                                 </div>
 
-                               
-                                  <div class="col-md-12">
+                                <div class="col-md-12">
 
                                     <label for="formFile" class="form-label">Choose file</label>
                                     
@@ -157,7 +158,7 @@
                               </div>
                               <!-- /.card-body -->
 
-                                <div class=" " >
+                                <div class="" >
                                     <div class="common">
                                     <input type="submit" class="btn btn-primary" name="ticket_btn" value="Submit">
 

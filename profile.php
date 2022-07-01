@@ -8,7 +8,7 @@
 
   <!-- Top Navbar -->
   <?php
-  include "emplyee_top_nav.php";
+  include "top_nav.php";
   ?>
   
   <!-- /.navbar -->
@@ -19,7 +19,7 @@
   <!-- Left Sidebar Container -->
 <?php
   
-  include "employee_left_nav.php";  
+  include "left_nav.php";  
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -36,7 +36,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="emplyee_dasbord.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="dashbord.php">Home</a></li>
               <li class="breadcrumb-item active">Profile</li>
             </ol>
           </div>
@@ -77,10 +77,13 @@
                                         echo"Admin";
 
                                       }elseif($_SESSION['user_type']=="2"){
-                                        echo"Employee User";
+                                        echo"Employee";
 
                                       }elseif($_SESSION['user_type']=="3"){
-                                        echo"Service Staf";
+                                        echo"Support";
+
+                                      }elseif($_SESSION['user_type']=="4"){
+                                        echo"User";
 
                                       }
                                     

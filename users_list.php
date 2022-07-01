@@ -14,7 +14,7 @@ include "header.php";
     
  <!-- Top Navbar -->
  <?php
-  include "admin_top_nav.php";
+  include "top_nav.php";
   ?>
   
   <!-- /.navbar -->
@@ -22,7 +22,7 @@ include "header.php";
   <!-- Left Sidebar Container -->
 <?php
   
-  include "admin_left_nav.php"; 
+  include "left_nav.php"; 
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -32,7 +32,7 @@ include "header.php";
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Ticket List</h1>
+                    <h1>User List</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -62,6 +62,7 @@ include "header.php";
                                 
                                 <th>Employee Id</th>                                
                                 <th>Name</th>                               
+                                <th>Emage</th>                               
                                 <th>Email</th> 
                                 <th>Users Type</th>                               
                                 <th>Created at</th>
@@ -79,7 +80,7 @@ include "header.php";
                                 die("Connection failed: " .  $conect->connect_error);
                             } else {
                                
-                                $select_query =  "SELECT * FROM `ticket_regestration_table` ";
+                                $select_query =  "SELECT * FROM `users` ";
 
                                 $result       = $conect->query($select_query);
 
@@ -92,8 +93,26 @@ include "header.php";
                                             
                                             <td><?php echo $row->employee_id ?></td>
                                             <td><?php echo $row->name ?></td>
+                                            <td>
+                                                <div class="image">
+                                                    <div class="common img " >                                                        
+                                                        <img  src='images/<?php  echo $row->image?>'>                                                        
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td><?php echo $row->email ?></td>
-                                            <td><?php echo $row->user_type ?></td>
+                                            <td>
+                                                <?php if($row->user_type==1 ){
+                                                    echo "Super Admin ".$row->user_type;
+
+                                                }elseif($row->user_type==2){
+                                                    echo "Employee ".$row->user_type;
+                                                }elseif($row->user_type==3){
+                                                    echo "Support Team ".$row->user_type;
+                                                }elseif($row->user_type==4){
+                                                    echo "Users ".$row->user_type;
+                                                } ?>
+                                            </td>
                                             <td><?php echo $row->created_at ?></td>
                                             
                                             

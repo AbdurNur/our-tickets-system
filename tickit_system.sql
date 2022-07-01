@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2022 at 12:23 PM
+-- Generation Time: Jul 01, 2022 at 05:01 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -49,10 +49,10 @@ INSERT INTO `problem_ticket` (`id`, `employee_id`, `problem_detail`, `problem_pr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ticket_regestration_table`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `ticket_regestration_table` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `user_type` tinyint(1) NOT NULL DEFAULT 1,
   `name` varchar(100) NOT NULL,
@@ -65,14 +65,16 @@ CREATE TABLE `ticket_regestration_table` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ticket_regestration_table`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `ticket_regestration_table` (`id`, `user_type`, `name`, `email`, `employee_id`, `password`, `image`, `created_at`, `update_at`) VALUES
+INSERT INTO `users` (`id`, `user_type`, `name`, `email`, `employee_id`, `password`, `image`, `created_at`, `update_at`) VALUES
 (80, 1, 'MD.ABDUR NUR', 'abdurnurmondol152@gmail.com', '12312121', '123456789', 'applicant_image.jpg', '2022-05-29 18:53:00', '2022-05-30 15:19:27'),
-(82, 2, 'Sakib', 'sakib@gmail.com', '12312121', '123456789', 'sakib.jpg', '2022-05-29 22:30:03', '2022-05-30 16:21:55'),
-(83, 2, 'Tamim', 'tamim@gmail.com', '147258', '123456789', 'tamim-iqbal-1541503707.jpg', '2022-05-30 14:42:39', '2022-05-30 15:01:41'),
-(84, 2, 'Sabbir', 'sabbir@gmail.com', '12312121', '123456789', 'sabbir (2).jpg', '2022-05-30 17:34:30', NULL);
+(84, 2, 'Sabbir', 'sabbir@gmail.com', '12312121', '123456789', 'sabbir (2).jpg', '2022-05-30 17:34:30', NULL),
+(90, 4, 'zobbar', 'z@gmail.com', '12312121', '123456789', 'download.jpg', '2022-07-01 16:05:01', NULL),
+(91, 3, 'Fabliha Apu', 'f@gmail.com', '122121', '123456789', 'download.jpg', '2022-07-01 16:42:25', NULL),
+(93, 3, 'hhhhh', 'hhh', '12312121', '123456789', 'SUPPORT.png', '2022-07-01 16:56:18', NULL),
+(94, 2, 'Employee', 'emp_1@supportticket.com', '12312121', '123456789', 'employee.jpg', '2022-07-01 16:58:03', NULL);
 
 --
 -- Indexes for dumped tables
@@ -85,9 +87,9 @@ ALTER TABLE `problem_ticket`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ticket_regestration_table`
+-- Indexes for table `users`
 --
-ALTER TABLE `ticket_regestration_table`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -101,10 +103,10 @@ ALTER TABLE `problem_ticket`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `ticket_regestration_table`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `ticket_regestration_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

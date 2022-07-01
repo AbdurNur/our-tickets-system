@@ -6,16 +6,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="dasbord.php" class="nav-link">Dasbord</a>
+        <a href="dashbord.php" class="nav-link">Dasbord</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="logout.php" class="nav-link">Log Out</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="registration.php" class="nav-link">Add User</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="creat_ticket.php" class="nav-link">Creat Ticket</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="profile.php" class="nav-link">Profile</a>

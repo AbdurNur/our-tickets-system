@@ -84,7 +84,7 @@ include "canection.php";
                                                                 
                                 
 
-                                    $update       = "UPDATE  ticket_regestration_table SET name='$name',email='$email',employee_id='$empley_id',password='$new_password',image='$image_name',update_at='$updated_at' WHERE id =$id";
+                                    $update       = "UPDATE  users SET name='$name',email='$email',employee_id='$empley_id',password='$new_password',image='$image_name',update_at='$updated_at' WHERE id =$id";
 
 
                                     $result = $conect->query($update);

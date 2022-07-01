@@ -4,7 +4,8 @@ $user_type= array(
 
     "1"=> "Super Admin",
     "2"=> "Employee",
-    "3"=> "Service Staf",
+    "3"=> "Support Team",
+    "4"=> "Users",
                     
    
 );

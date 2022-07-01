@@ -7,7 +7,6 @@ include "canection.php";
     if(isset($_POST['registration_form']) && !empty($_POST['registration_form'])){
 
 
-
                     
             $validate_response   = input_validation();
 
@@ -53,7 +52,7 @@ include "canection.php";
                     }else{
 
 
-                        $email_cheek ="SELECT* FROM ticket_regestration_table WHERE email='$email'";
+                        $email_cheek ="SELECT* FROM users WHERE email='$email'";
                         $result=$conect->query($email_cheek);
 
                         if($result->num_rows>0){
@@ -74,8 +73,8 @@ include "canection.php";
                                     $_SESSION['message']    =   $message;
                                                            
                                                                 
-                                }else{
-                                    $insert = " INSERT INTO ticket_regestration_table ( user_type,name,email,employee_id,password,image,created_at) VALUES ('$user_type', '$name', '$email', '$empley_id','$password','$image_name','$created_at')";
+                                }elseif(!empty($image_name)){
+                                    $insert = " INSERT INTO users ( user_type,name,email,employee_id,password,image,created_at) VALUES ('$user_type', '$name', '$email', '$empley_id','$password','$image_name','$created_at')";
 
                                     $result = $conect->query($insert);
 
@@ -85,24 +84,59 @@ include "canection.php";
                                         $_SESSION['success']            =   'success';
                                         $_SESSION['message']    =   $message;
 
-
-
-
                                     }
+                                    header('Location:users_list.php');
                                    
 
                                     
-                                
-                                   
-                                
+                                }elseif(empty($image_name) &&  $user_type==2 ){
+                                    $insert = " INSERT INTO users ( user_type,name,email,employee_id,password,image,created_at) VALUES ('$user_type', '$name', '$email', '$empley_id','$password','employee.jpg','$created_at')";
 
+                                    $result = $conect->query($insert);
+
+                                    if($result){
+                                        $message    =   "Rigestration Success";
+        
+                                        $_SESSION['success']            =   'success';
+                                        $_SESSION['message']    =   $message;
+
+                                    }
+                                    header('Location:users_list.php');
+
+                                    
+                                }elseif(empty($image_name)&&  $user_type==3 ){
+                                    $insert = " INSERT INTO users ( user_type,name,email,employee_id,password,image,created_at) VALUES ('$user_type', '$name', '$email', '$empley_id','$password','SUPPORT.png','$created_at')";
+
+                                    $result = $conect->query($insert);
+
+                                    if($result){
+                                        $message    =   "Rigestration Success";
+        
+                                        $_SESSION['success']            =   'success';
+                                        $_SESSION['message']    =   $message;
+
+                                    }
+                                    header('Location:users_list.php');
+
+                                    
+                                }elseif(empty($image_name)&&  $user_type==4 ){
+                                    $insert = " INSERT INTO users ( user_type,name,email,employee_id,password,image,created_at) VALUES ('$user_type', '$name', '$email', '$empley_id','$password','download.jpg','$created_at')";
+
+                                    $result = $conect->query($insert);
+
+                                    if($result){
+                                        $message    =   "Rigestration Success";
+        
+                                        $_SESSION['success']            =   'success';
+                                        $_SESSION['message']    =   $message;
+
+                                    }
+                                    header('Location:users_list.php');
+
+                                    
                                 }
-
-                            
                         }
-                    }
-                        
-                    
+                    }                   
             }
 
 

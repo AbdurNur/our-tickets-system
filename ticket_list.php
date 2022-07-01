@@ -1,25 +1,27 @@
 <!-- header part -->
 <?php session_start();
-include "canection.php";
-include "header.php";
-
+    include "canection.php";
+    include "header.php";
+    
 
 ?>
-
-
-
+  
 
  <!-- Top Navbar -->
  <?php
-  include "admin_top_nav.php";
+  include "top_nav.php";
   ?>
   
+  <!-- /.navbar -->
   <!-- /.navbar -->
 
   <!-- Left Sidebar Container -->
 <?php
+ include "left_nav.php";    
+?>
+<?php
   
-  include "admin_left_nav.php"; 
+    
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -33,8 +35,8 @@ include "header.php";
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">General Form</li>
+                        <li class="breadcrumb-item"><a href="dashbord.php">Home</a></li>
+                        <li class="breadcrumb-item active">Ticket List</li>
                     </ol>
                 </div>
             </div>
@@ -47,12 +49,13 @@ include "header.php";
             <div class="row ">
                 <!-- left column -->
                 <div class="col-md-12 common">
+                    
+                    <?php
 
+                        // $id=$_POST['hidden'];
                     
                     
-
-
-                </form>
+                    ?>
 
                     <!-- Modal -->
                     <table style="border: 4px solid gray" class="table table-light table-striped  table-hover myDataTable">
@@ -68,7 +71,11 @@ include "header.php";
                                 
                                 <th>Priority</th>
                                 <th>Created at</th>
-                                <th></th>
+                                <th>
+                                     <?php
+                                      //echo $id;
+                                      ?> 
+                                </th>
 
                             </tr>
 
@@ -81,8 +88,9 @@ include "header.php";
                             if ($conect->connect_error) {
                                 die("Connection failed: " .  $conect->connect_error);
                             } else {
+                                $emp_id=$_SESSION['login_employee_id'];
                                
-                                $select_query =  "SELECT * FROM `problem_ticket` ";
+                                $select_query =  "SELECT * FROM `problem_ticket`WHERE employee_id= '$emp_id'";
 
                                 $result       = $conect->query($select_query);
 
@@ -120,20 +128,20 @@ include "header.php";
 
 
 
+                   
+
+
+
+
+
+
                 </div>
-
-
-
-
-
+                <!--/.col (left) -->
 
             </div>
-            <!--/.col (left) -->
-
-        </div>
-        <!-- /.row -->
-</div><!-- /.container-fluid -->
-</section>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->

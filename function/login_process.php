@@ -38,12 +38,12 @@
 
         }else{
             
-            $cheek ="SELECT * FROM ticket_regestration_table WHERE email='$email' ";
+            $cheek ="SELECT * FROM users WHERE email='$email' ";
             $result=$conect->query($cheek);
             
             if($result->num_rows > 0){
 
-                $select="SELECT * FROM ticket_regestration_table WHERE email='$email' AND password='$password'";
+                $select="SELECT * FROM users WHERE email='$email' AND password='$password'";
                 $result=$conect->query($select);
 
                 if($result->num_rows > 0){
@@ -107,13 +107,19 @@
             if($is_login_error==false){
                
                 if($user_type== "1"){
-                    header('Location:admin_dasbord.php');
+                    header('Location:dashbord.php');
                     exit;
 
                 }elseif($user_type== "2"){
-                    header('Location:emplyee_dasbord.php');
+                    header('Location:dashbord.php');
 
                 }elseif($user_type== "3"){
+                    header('Location:dashbord.php');
+                   
+
+                }
+                elseif($user_type== "4"){
+                    header('Location:dashbord.php');
                    
 
                 }
