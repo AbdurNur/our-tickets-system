@@ -1,0 +1,78 @@
+.img {
+    margin-right: 100px;
+}
+
+.img img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+#profile_main_div{
+
+    border-radius: 20px;
+    height: 375px;
+}
+#profile_img{
+    background-color:rgb(237, 226, 226);
+    padding: 15px;
+    
+}
+#profile_img img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    
+
+
+}
+.profile_detail{
+    padding: 15px;
+}
+
+ul li {
+
+    margin-left: 50px;
+}
+
+
+
+
+
+
+.froms {
+    margin: 0 auto;
+
+
+}
+
+
+.from {
+    margin: 0 auto;
+    margin-top: 3.12rem;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 10px;
+
+
+}
+
+
+.heading {
+    text-align: center;
+
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+
+}
+
+.input-group {
+    margin-top: 22px;
+
+}
+
+.common {
+    margin: 0 auto;
+
+}
