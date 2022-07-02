@@ -87,7 +87,7 @@ include "header.php";
 
                         <div class="input-group col-md-12">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-paper-plane"></i></span>
-                            <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Usernamearia-describedby"  aria-describedby="basic-addon1" value="<?php  if(isset($_SESSION['form_field']['email']) 
+                            <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Usernamearia-describedby"  aria-describedby="basic-addon1" value="<?php   if(isset($_SESSION['form_field']['email']) 
                                             && !empty($_SESSION['form_field']['email'])){ echo $_SESSION['form_field']['email']; 
                                             unset($_SESSION['form_field']['email']); } ?>">
 

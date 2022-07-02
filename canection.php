@@ -4,7 +4,7 @@ $server_name    = "localhost";
 $db_user        = "root";
 $user_password  = "";
 $database       = "tickit_system";
-
+global $conect;
 //oop
 $conect =new mysqli($server_name,$db_user,$user_password,$database);
 

@@ -66,6 +66,7 @@ include "header.php";
                                 <th>Email</th> 
                                 <th>Users Type</th>                               
                                 <th>Created at</th>
+                                <th>Updated at</th>
                                 
 
                             </tr>
@@ -114,6 +115,7 @@ include "header.php";
                                                 } ?>
                                             </td>
                                             <td><?php echo $row->created_at ?></td>
+                                            <td><?php echo $row->update_at ?></td>
                                             
                                             
                                         </tr>

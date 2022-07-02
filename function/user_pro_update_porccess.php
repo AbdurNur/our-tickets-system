@@ -11,8 +11,7 @@ include "canection.php";
         // print"</pre>";
         // exit;
 
-
-
+        
 
                     
             $validate_response   = input_validation_update();
@@ -64,26 +63,7 @@ include "canection.php";
 
                     }else{
 
-                        // $select="SELECT * FROM ticket_regestration_table WHERE password='$old_password'";
-                        // $result=$conect->query($select);
-
-                        
-
-                        
-
-                        // if($result->num_rows>0){
-                        //     $message    =   "Password not macth";
-    
-                        //     $_SESSION['error']            =   'error';
-                        //     $_SESSION['message']    =   $message;
-                            
-                                
-                           
-                            
-                        // }else{     
-                                                                
-                                
-
+                                if(!empty($image_name)){
                                     $update       = "UPDATE  users SET name='$name',email='$email',employee_id='$empley_id',password='$new_password',image='$image_name',update_at='$updated_at' WHERE id =$id";
 
 
@@ -105,6 +85,78 @@ include "canection.php";
 
 
                                     }
+
+                                }elseif(empty($image_name)&&  $_SESSION['user_type']==2) {
+                                    $update       = "UPDATE  users SET name='$name',email='$email',employee_id='$empley_id',password='$new_password',image='employee.jpg',update_at='$updated_at' WHERE id =$id";
+
+
+                                    $result = $conect->query($update);
+                                                                
+                                    
+
+
+                                    if($result){
+                                        $message    =   "Update  Success";
+        
+                                        $_SESSION['success']            =   'success';
+                                        $_SESSION['message']    =   $message;
+
+                                        header('Location:index.php');
+                                        exit;
+
+
+
+
+                                    }
+
+                                }elseif(empty($image_name)&&  $_SESSION['user_type']==3){
+                                    $update       = "UPDATE  users SET name='$name',email='$email',employee_id='$empley_id',password='$new_password',image='SUPPORT.png',update_at='$updated_at' WHERE id =$id";
+
+
+                                    $result = $conect->query($update);
+                                                                
+                                    
+
+
+                                    if($result){
+                                        $message    =   "Update  Success";
+        
+                                        $_SESSION['success']            =   'success';
+                                        $_SESSION['message']    =   $message;
+
+                                        header('Location:index.php');
+                                        exit;
+
+
+
+
+                                    }
+                                    
+                                }elseif(empty($image_name)&&  $_SESSION['user_type']==4){
+                                    $update       = "UPDATE  users SET name='$name',email='$email',employee_id='$empley_id',password='$new_password',image='download.jpg',update_at='$updated_at' WHERE id =$id";
+
+
+                                    $result = $conect->query($update);
+                                                                
+                                    
+
+
+                                    if($result){
+                                        $message    =   "Update  Success";
+        
+                                        $_SESSION['success']            =   'success';
+                                        $_SESSION['message']    =   $message;
+
+                                        header('Location:index.php');
+                                        exit;
+
+
+
+
+                                    }
+                                    
+                                }
+                                   
                            
                         
                     }                     

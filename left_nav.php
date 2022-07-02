@@ -80,7 +80,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="user_access.php" class="nav-link">
+            <a href="access_module.php" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
               <p>Access Module</p>
             </a>
